@@ -26,6 +26,13 @@ import Header from "./components/Header.vue";
 import Welcome from "./components/Welcome.vue";
 import IntroCard from "./components/IntroCard.vue";
 import ResumeRow from "./components/ResumeRow.vue";
+import Vue from "vue";
+import VueMeta from "vue-meta";
+Vue.use(VueMeta, {
+  // optional pluginOptions
+  refreshOnceOnNavigation: true
+});
+
 export default {
   name: "App",
   components: {
@@ -33,6 +40,13 @@ export default {
     Welcome,
     IntroCard,
     ResumeRow
+  },
+  metaInfo: {
+    title: "Heather Tran",
+    htmlAttrs: {
+      lang: "en",
+      amp: true
+    }
   }
 };
 </script>
@@ -69,7 +83,8 @@ body {
   (
     primary: #fec5bb,
     // The primary color of your brand
-      accent: #f8edeb // The secondary color of your brand
+      accent: #c4d4ca,
+    // The secondary color of your brand
   )
 );
 

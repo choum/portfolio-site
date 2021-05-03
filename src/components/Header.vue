@@ -22,7 +22,8 @@ export default {
 <style scoped lang="scss">
 @import "../scss/_variable.scss";
 .md-title {
-  color: $isabelline !important;
+  color: white !important;
+  user-select: none;
   font: 1.5vw "Signika", sans-serif;
 }
 </style>

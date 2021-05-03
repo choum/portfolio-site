@@ -1,6 +1,6 @@
 <template>
   <div id="overWrapper">
-    <TitleCard title="Work History" />
+    <TitleCard title="Work History" icon="work" />
     <div class="md-layout md-gutter resumeWrapper">
       <!-- NG -->
       <ResumeCard
@@ -32,7 +32,7 @@
         :isJob="oa.isJob"
       />
     </div>
-    <TitleCard title="Projects" />
+    <TitleCard title="Projects" icon="code" />
     <div class="md-layout md-gutter resumeWrapper">
       <!-- project lite-->
       <ResumeCard
@@ -41,6 +41,7 @@
         :src="pl.src"
         :isJob="pl.isJob"
         :color="pl.color"
+        :link="pl.link"
       />
       <!--bumpie-->
       <ResumeCard
@@ -49,6 +50,7 @@
         :src="bump.src"
         :isJob="bump.isJob"
         :color="bump.color"
+        :link="bump.link"
       />
     </div>
   </div>
@@ -77,7 +79,7 @@ export default {
       cpp: {
         title: "Cal Poly Pomona",
         content:
-          "This is my current position where I've done most of my webapplication learning. Here I created mockups and implemented changes using HTML, CSS, Bootstrap, Javascript. I created components using React.js and Vue.js",
+          "I worked here during my time in college. Here I created mockups and implemented changes using HTML, CSS, Bootstrap, Javascript. I created components using React.js and Vue.js",
         src: require("../assets/cpp.jpeg"),
         isJob: true
       },
@@ -85,7 +87,7 @@ export default {
         title: "EKGaming",
         content:
           "This internship allowed me to learn how to work around Wordpress using code. Gaming is one of my favorite hobbies and working on this site with others let me enjoy my passion as well as be productive. I used basic HTML, CSS, Javascript/JQuery for this job. This position was remote.",
-        src: require("../assets/transparent.png"),
+        src: require("../assets/ek.png"),
         isJob: true,
         color: "#fec89a"
       },
@@ -99,18 +101,20 @@ export default {
       pl: {
         title: "Project Lite",
         content:
-          "This internship allowed me to learn how to work around Wordpress using code. Gaming is one of my favorite hobbies and working on this site with others let me enjoy my passion as well as be productive. I used basic HTML, CSS, Javascript/JQuery for this job. This position was remote.",
+          "Project Lite was a project that some college buddies and I decided to do for the Bronco Startup Competition during my senior year at Cal Poly Pomona. This was a way for us to practice our development skills using React.js in a startup environment. As a finalist we were able to present to entrepreneurs.",
         src: require("../assets/projectlite.gif"),
         isJob: false,
-        color: "#d8e2dc"
+        color: "#d8e2dc",
+        link: "https://github.com/choum/projectlite"
       },
       bump: {
         title: "Bumpie",
         content:
-          "This internship allowed me to learn how to work around Wordpress using code. Gaming is one of my favorite hobbies and working on this site with others let me enjoy my passion as well as be productive. I used basic HTML, CSS, Javascript/JQuery for this job. This position was remote.",
-        src: require("../assets/transparent.png"),
+          "Bumpie is a project a friend invited me to assist with the front-end development. This uses React.js to build the front-end and AWS for the back-end. This is an application that allows users to track changes to their habits.",
+        src: require("../assets/bumpie.png"),
         isJob: false,
-        color: "#fec5bb"
+        color: "#f4c0b8",
+        link: "https://github.com/Vuologist/bumpie/"
       }
     };
   }

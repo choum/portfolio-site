@@ -3,10 +3,7 @@
     <md-card>
       <md-card-header>
         <md-avatar class="md-large">
-          <img
-            src="https://vuematerial.io/assets/examples/avatar.png"
-            alt="Avatar"
-          />
+          <img src="../assets/me.jpg" alt="Avatar" />
         </md-avatar>
       </md-card-header>
 

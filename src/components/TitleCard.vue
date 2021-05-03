@@ -2,6 +2,7 @@
   <md-card>
     <md-card-header class="md-display-2">
       <p>{{ title }}</p>
+      <md-icon>{{ icon }}</md-icon>
     </md-card-header>
   </md-card>
 </template>
@@ -14,7 +15,7 @@ import "vue-material/dist/theme/default.css";
 Vue.use(VueMaterial);
 export default {
   name: "TitleCard",
-  props: ["title"]
+  props: ["title", "icon"]
 };
 </script>
 
@@ -27,7 +28,9 @@ p {
 .md-card {
   margin-top: 2em;
   width: 50%;
-  background-color: $babypink !important;
+  background-color: $melon !important;
+  width: calc(50% - 20px);
+  user-select: none;
 }
 .md-display-2 {
   color: white !important;
@@ -36,23 +39,24 @@ p {
   font-size: 30pt;
   font-family: "Lato";
   font-weight: 700;
+  margin-bottom: 0px;
 }
 
-p:after {
-  background: none repeat scroll 0 0 transparent;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 5px;
-  left: 50%;
-  position: absolute;
-  background: #fff;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  width: 0;
+.md-card-header {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-p:hover:after {
-  width: 100%;
-  left: 0;
-  top: -5;
+
+.md-card {
+  border-bottom: 7px white solid;
+}
+i {
+  color: #fff !important;
+  margin: 0;
+  margin-top: 5px;
+  margin-right: 20px;
+  font-size: 30px !important;
 }
 </style>
