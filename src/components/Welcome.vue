@@ -13,10 +13,29 @@ export default {
 };
 </script>
 
-<style scope>
+<style scoped>
 @import url(https://fonts.googleapis.com/css?family=Signika:700, 300, 600);
 #welcomeWrapper {
   margin-top: -7em;
+}
+@media (max-width: 1024px) {
+  #welcomeWrapper {
+    margin-top: 0;
+    margin-bottom: 7em;
+  }
+  h1 {
+    font-size: 55px !important;
+  }
+}
+@media (max-width: 375px) {
+  h1 {
+    font-size: 45px !important;
+  }
+}
+@media (max-width: 280px) {
+  h1 {
+    font-size: 35px !important;
+  }
 }
 h1 {
   font-size: 5em;

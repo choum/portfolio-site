@@ -35,8 +35,17 @@
         :icon="['far', 'file-pdf']"
         size="2x"
         :style="{ color: '#9c9c9c' }"
+        class="space"
       />
       <md-tooltip md-direction="top">Resume</md-tooltip>
+    </a>
+    <a href="mailto:heathertran@rocketmail.com">
+      <font-awesome-icon
+        :icon="['far', 'envelope']"
+        size="2x"
+        :style="{ color: '#9c9c9c' }"
+      />
+      <md-tooltip md-direction="top">Email</md-tooltip>
     </a>
   </div>
 </template>
@@ -50,8 +59,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
-library.add(faLinkedin, faInstagram, faGithub, faFilePdf);
+import { faFilePdf, faEnvelope } from "@fortawesome/free-regular-svg-icons";
+library.add(faLinkedin, faInstagram, faGithub, faFilePdf, faEnvelope);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 export default {
   name: "SocialLinks"

@@ -32,6 +32,24 @@ p {
   width: calc(50% - 20px);
   user-select: none;
 }
+@media (max-width: 415px) {
+  p {
+    font-size: 25pt;
+  }
+  .md-display-2 {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 360px) {
+  p {
+    font-size: 18pt;
+  }
+}
+@media (max-width: 1024px) {
+  .md-card {
+    width: 100%;
+  }
+}
 .md-display-2 {
   color: white !important;
   text-align: left;

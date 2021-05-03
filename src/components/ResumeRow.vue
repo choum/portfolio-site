@@ -8,6 +8,8 @@
         :content="ng.content"
         :src="ng.src"
         :isJob="ng.isJob"
+        :begin="ng.begin"
+        :end="ng.end"
       />
       <!-- CPP -->
       <ResumeCard
@@ -15,6 +17,8 @@
         :content="cpp.content"
         :src="cpp.src"
         :isJob="cpp.isJob"
+        :begin="cpp.begin"
+        :end="cpp.end"
       />
       <!-- EKGaming -->
       <ResumeCard
@@ -23,6 +27,8 @@
         :src="ek.src"
         :isJob="ek.isJob"
         :color="ek.color"
+        :begin="ek.begin"
+        :end="ek.end"
       />
       <!-- OpenAI -->
       <ResumeCard
@@ -30,6 +36,8 @@
         :content="oa.content"
         :src="oa.src"
         :isJob="oa.isJob"
+        :begin="oa.begin"
+        :end="oa.end"
       />
     </div>
     <TitleCard title="Projects" icon="code" />
@@ -42,6 +50,8 @@
         :isJob="pl.isJob"
         :color="pl.color"
         :link="pl.link"
+        :begin="pl.begin"
+        :end="pl.end"
       />
       <!--bumpie-->
       <ResumeCard
@@ -51,6 +61,8 @@
         :isJob="bump.isJob"
         :color="bump.color"
         :link="bump.link"
+        :begin="bump.begin"
+        :end="bump.end"
       />
     </div>
   </div>
@@ -74,14 +86,18 @@ export default {
         content:
           "My name is Heather. I am currently a full-time software developer analyst at Northrop Grumman in Redondo Beach, California. I was born and raised in Orange County and has developed a great interest in web development and social media",
         src: require("../assets/ng.jpg"),
-        isJob: true
+        isJob: true,
+        begin: "June 2019",
+        end: "Present"
       },
       cpp: {
         title: "Cal Poly Pomona",
         content:
           "I worked here during my time in college. Here I created mockups and implemented changes using HTML, CSS, Bootstrap, Javascript. I created components using React.js and Vue.js",
         src: require("../assets/cpp.jpeg"),
-        isJob: true
+        isJob: true,
+        begin: "Feb 2018",
+        end: "May 2019"
       },
       ek: {
         title: "EKGaming",
@@ -89,7 +105,9 @@ export default {
           "This internship allowed me to learn how to work around Wordpress using code. Gaming is one of my favorite hobbies and working on this site with others let me enjoy my passion as well as be productive. I used basic HTML, CSS, Javascript/JQuery for this job. This position was remote.",
         src: require("../assets/ek.png"),
         isJob: true,
-        color: "#fec89a"
+        color: "#fec89a",
+        begin: "Feb 2018",
+        end: "Feb 2018"
       },
       oa: {
         title: "Open AI",
@@ -131,10 +149,6 @@ export default {
 }
 .md-card:nth-child(2) .color {
   background-color: $peachcrayola;
-}
-
-#overWrapper {
-  margin-bottom: 3em;
 }
 
 img {

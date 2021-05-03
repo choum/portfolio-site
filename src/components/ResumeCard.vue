@@ -1,5 +1,7 @@
 <template>
-  <div class="md-layout-item">
+  <div
+    class="md-layout-item md-medium-size-33 md-small-size-50 md-xsmall-size-100"
+  >
     <md-card :class="{ largerCard: isJob }">
       <md-card-media-cover>
         <md-card-media :style="cssProps">
@@ -17,6 +19,9 @@
             <p class="md-title">
               {{ title }}
             </p>
+            <span class="date" v-if="begin !== undefined && end !== undefined"
+              >{{ begin }} - {{ end }}</span
+            >
           </md-card-header>
           <md-card-expand>
             <md-card-expand-trigger>
@@ -48,7 +53,7 @@ import "vue-material/dist/theme/default.css";
 Vue.use(VueMaterial);
 export default {
   name: "ResumeCard",
-  props: ["title", "content", "src", "isJob", "color", "link"],
+  props: ["title", "content", "src", "isJob", "color", "link", "begin", "end"],
   computed: {
     cssProps() {
       return {
@@ -68,23 +73,51 @@ export default {
 @import "../scss/_variable.scss";
 .md-title {
   font-weight: bold;
+  margin-top: 0px !important;
 }
 .md-card-header {
   width: 100%;
+  padding-bottom: 8px;
+  padding-top: 8px;
 }
 .md-body-1 {
   font-size: 16px;
 }
+@media (max-width: 415px) {
+  .md-body-1 {
+    font-size: 14px !important;
+  }
+  .md-icon {
+    color: #fff !important;
+    font-size: 25px !important;
+  }
+  .md-title {
+    font-size: 20px;
+  }
+  .md-card-expand.md-icon-button {
+    width: 25px;
+    height: 25px;
+  }
+  .md-card,
+  img,
+  .md-card-area {
+    max-height: 325px !important;
+    min-height: 325px !important;
+  }
+}
+img {
+  object-fit: cover;
+}
 .md-card,
 img,
 .md-card-area {
-  max-height: 250px !important;
-  min-height: 250px !important;
+  max-height: 250px;
+  min-height: 250px;
 }
 
 .largerCard {
-  min-height: 275px !important;
-  max-height: 275px !important;
+  min-height: 275px;
+  max-height: 275px;
 }
 
 .md-card-area {
@@ -148,5 +181,11 @@ a:hover:after {
 }
 .link {
   align-self: flex-end;
+}
+.date {
+  font-style: italic;
+}
+.md-card {
+  margin-bottom: 3em;
 }
 </style>

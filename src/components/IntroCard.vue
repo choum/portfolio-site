@@ -36,6 +36,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+@media (max-width: 415px) {
+  .md-title {
+    font-size: 18px;
+  }
+}
 .md-avatar {
   float: none;
   margin-top: -75px;
