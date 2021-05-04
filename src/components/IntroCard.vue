@@ -47,6 +47,7 @@ export default {
   min-width: 125px;
   min-height: 125px;
   border-radius: 125px;
+  margin-right: 0px;
 }
 .md-card-header {
   padding-top: 0;

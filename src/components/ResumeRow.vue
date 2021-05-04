@@ -84,7 +84,7 @@ export default {
       ng: {
         title: "Northrop Grumman",
         content:
-          "My name is Heather. I am currently a full-time software developer analyst at Northrop Grumman in Redondo Beach, California. I was born and raised in Orange County and has developed a great interest in web development and social media",
+          "I currently work here supporting projects by creating web apps using Vue.js, HTML, CSS, JS, Jquery, ASP.NET (C#), VBA for Excel, MS-SQL, GIT. I also make reports using PowerBI and SSRS.",
         src: require("../assets/ng.jpg"),
         isJob: true,
         begin: "June 2019",

@@ -10,6 +10,7 @@
         <md-card-area :class="{ largerCard: isJob }">
           <md-card-header>
             <md-button
+              :href="link"
               v-if="isJob === false && isHidden === false"
               class="md-icon-button md-raised link md-accent"
               md-ripple="false"
@@ -149,35 +150,6 @@ i {
 
 .md-card-media {
   background-color: var(--color);
-}
-a {
-  color: #fff !important;
-  text-decoration: none;
-  letter-spacing: 0.15em;
-  display: inline-block;
-  padding: 15px 20px;
-  position: relative;
-  margin-left: 11em !important;
-  margin-right: 11em !important;
-}
-a:hover {
-  text-decoration: none;
-}
-a:after {
-  background: none repeat scroll 0 0 transparent;
-  bottom: 2;
-  content: "";
-  display: block;
-  height: 2px;
-  left: 50%;
-  position: absolute;
-  background: #fff;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  width: 0;
-}
-a:hover:after {
-  width: 100%;
-  left: 0;
 }
 .link {
   align-self: flex-end;
