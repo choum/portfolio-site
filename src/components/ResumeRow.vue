@@ -55,7 +55,7 @@ export default {
       },
       ek: {
         title: "EKGaming",
-        content: "This internship allowed me to learn how to work around Wordpress using code. Gaming is one of my favorite hobbies and working on this site with others let me enjoy my passion as well as be productive. I used basic HTML, CSS, Javascript/JQuery for this job. This position was remote.",
+        content: "Gaming is one of my favorite hobbies and working on this site with others let me enjoy my passion as well as be productive. I used basic HTML, CSS, Javascript/JQuery and Wordpress for this remote internship position.",
         src: require("../assets/ek.png"),
         isJob: true,
         color: "#fec89a",

@@ -21,7 +21,7 @@
               <md-icon>keyboard_arrow_down</md-icon>
             </md-button>
           </md-card-expand-trigger>
-          <md-card-expand-content>
+          <md-card-expand-content class="md-scrollbar">
             <p class="md-body-1">
               {{ content }}
             </p>
@@ -100,13 +100,13 @@ img {
 .md-card,
 .md-card-area,
 img {
-    max-height: 250px;
-    min-height: 250px;
+    max-height: 270px;
+    min-height: 270px;
 }
 
 .largerCard {
-    min-height: 275px;
-    max-height: 275px;
+    min-height: 325px;
+    max-height: 325px;
 }
 
 .md-card-area {

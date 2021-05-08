@@ -74,9 +74,5 @@ body {
 </style>
 
 <style lang="scss">
-@import "~vue-material/dist/theme/engine"; // Import the theme engine
 
-@include md-register-theme("default", (primary: #fec5bb, // The primary color of your brand accent: #c4d4ca, // The secondary color of your brand));
-
-@import "~vue-material/dist/theme/all"; // Apply the theme
 </style>
